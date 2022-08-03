@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import CounterButton from './components/CounterButton';
+import LightButton from './components/LightButton';
+import LottoButton from './components/LottoButton';
+import { useState } from 'react';
 
 function App() {
+  const [light, setLight] = useState(false);
+  const lightText = light === true ? 'on' : 'off';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className={lightText}>
+        <h1>React Buttons</h1>
       </header>
+      <main style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <CounterButton />
+        <LightButton light={light} setLight={setLight} lightText={lightText} />
+        <LottoButton />
+      </main>
     </div>
   );
 }

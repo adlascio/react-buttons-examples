@@ -28,6 +28,21 @@
   color: #61dafb;
 }
 
+.off{
+  background-color: black;
+  color: white;
+}
+
+.on{
+  background-color: yellow;
+}
+
+button {
+  border: none;
+  border-radius: 1rem;
+  padding: 0 .5rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
